@@ -1,0 +1,244 @@
+{
+  "title": "Shooting Star",
+  "artist": "Kep1er",
+  "year": "2024",
+  "album": "Kep1going On",
+  "languages": ["kor"],
+  "singers": [
+    "Xiaoting",
+    "Chaehyun",
+    "Yujin",
+    "Huening Bahiyyih",
+    "Mashiro",
+    "Yeseo",
+    "Yeongeun",
+    "Dayeon",
+    "Hikaru"
+  ],
+  "lines": [
+    {
+      "section": "intro",
+      "singers": 1,
+      "lyric": "Da ra da da da da ooh",
+      "start": "00:00:03.503",
+      "end": "00:00:11.177",
+      "time": [
+        {
+          "start": "00:00:03.503",
+          "end": "00:00:11.177",
+          "original": "Da ra da da da da ooh"
+        }
+      ]
+    },
+    {
+      "section": "verse",
+      "singers": [2, 3, 4, 5],
+      "lyric": "날 끌어당긴 감정의 Blasting",
+      "translations": {
+        "eng": "Blasting of the emotion that draws me in",
+        "jpn": "私を引き寄せた感情の Blasting",
+        "zho": "吸引我的情感 Blasting"
+      },
+      "start": "00:00:12.929",
+      "end": "00:00:15.765",
+      "time": [
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "날",
+          "roman": "nal"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "끌",
+          "roman": "kkeu"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "어",
+          "roman": "oe"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "당",
+          "roman": "dang"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "긴",
+          "roman": "gin"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "감",
+          "roman": "gam"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "정",
+          "roman": "jeong"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "의",
+          "roman": "ui"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "Blas"
+        },
+        {
+          "start": "00:00:12.929",
+          "end": "00:00:15.765",
+          "original": "ting"
+        }
+      ]
+    },
+    {
+      "section": "pre-chorus",
+      "singers": [1, 2],
+      "lyric": "순간 빛이 터져 Bomb Bomb Bomb",
+      "translations": {
+        "eng": "A sudden flash bursts like Bomb Bomb Bomb",
+        "jpn": "その瞬間 光が弾ける Bomb Bomb Bomb",
+        "zho": "瞬间光芒迸发 Bomb Bomb Bomb"
+      },
+      "time": [
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "순",
+          "roman": "sun"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "간",
+          "roman": "gan"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "빛",
+          "roman": "bi"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "이",
+          "roman": "chi"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "터",
+          "roman": "teo"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "져",
+          "roman": "jyeo"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "Bomb",
+          "roman": "Bomb"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "Bomb",
+          "roman": "Bomb"
+        },
+        {
+          "start": "00:00:15.765",
+          "end": "00:00:18.476",
+          "original": "Bomb",
+          "roman": "Bomb"
+        }
+      ]
+    },
+    {
+      "section": "pre-chorus",
+      "singers": [1, 2],
+      "lyric": "또 다른 시작을 알려와 (Let's start)",
+      "translations": {
+        "eng": "Announcing another beginning (Let's start)",
+        "jpn": "新しい始まりを知らせる(Let's start)",
+        "zho": "宣布另一个开始 (Let's start)"
+      },
+      "time": [
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "또",
+          "roman": "tto"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "다",
+          "roman": "da"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "른",
+          "roman": "reun"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "시",
+          "roman": "si"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "작",
+          "roman": "jag"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "을",
+          "roman": "uel"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "알",
+          "roman": "all"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "려",
+          "roman": "yeo"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "와",
+          "roman": "wa"
+        },
+        {
+          "start": "00:00:20.979",
+          "end": "00:00:25.108",
+          "original": "(Let's start)",
+          "roman": "(Let's start)"
+        }
+      ]
+    }
+  ]
+}

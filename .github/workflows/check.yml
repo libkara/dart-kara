@@ -1,0 +1,24 @@
+name: Analyze and format code
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.dart"
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+      - name: Format
+        run: dart format --set-exit-if-changed lib
+      - run: dart analyze
+      - run: dart test

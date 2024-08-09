@@ -1,0 +1,11 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    - lines_longer_than_80_chars
+    - unnecessary_breaks
+    - sort_constructors_first
+# analyzer:
+#   exclude:
+#     - path/to/excluded/files/**
+
