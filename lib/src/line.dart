@@ -11,7 +11,7 @@ typedef KaraTranslation = Map<String, String>;
 class KaraLine {
   const KaraLine({
     required this.section,
-    required this.singers,
+    this.singers,
     required this.lyric,
     required this.start,
     required this.end,
@@ -20,7 +20,7 @@ class KaraLine {
   });
 
   final KaraSection section;
-  final List<bool> singers;
+  final List<bool>? singers;
   final String lyric;
   final KaraTranslation? translations;
   final Duration start;

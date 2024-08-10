@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be found
 // in LICENSE or at https://opensource.org/license/BSD-3-clause.
 
-/// Mark a section of Kara file
+/// Mark a section of Kara file.
 enum KaraSection {
   /// Contains metadata of the song.
   header,
@@ -45,13 +45,13 @@ enum KaraSection {
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [verse], [preChorus], [chorus], [posChrous], and
+  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous], and
   /// [postBridge].
   bridge,
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [verse], [preChorus], [chorus], [posChrous], and
+  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous], and
   /// [bridge].
   postBridge;
 

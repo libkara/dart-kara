@@ -88,10 +88,10 @@ KaraTime? _parseTimestamp(String line) {
   } else {
     return null;
   }
-  String original = lyricSplit.elementAt(1);
 
-  String? roman;
-  String? furigana;
+  String original = lyricSplit.elementAt(1);
+  String? roman = lyricSplit.elementAtOrNull(2);
+  String? furigana = lyricSplit.elementAtOrNull(3);
 
   return KaraTime(
     start: start,
@@ -112,10 +112,13 @@ Kara? parse(String raw) {
   late int year;
   late String album;
   late List<String> languages;
+  Map<int, String> singers = {};
 
   KaraSection currentSection = KaraSection.header;
-  KaraLine? currentLine;
-  Map<int, String> singers = {};
+  List<bool>? currentSingers;
+  String? currentLyric;
+  Duration? currentStart;
+  Duration? currentEnd;
 
   List<KaraLine> lines = [];
   List<KaraTime> time = [];
@@ -140,13 +143,7 @@ Kara? parse(String raw) {
         _ => KaraSection.header,
       };
 
-      if (currentSection.isSongStructure && currentLine != null) {
-        lines = [
-          ...lines,
-          currentLine,
-        ];
-        currentLine = null;
-      }
+      if (currentSection.isSongStructure && time.isNotEmpty) {}
     }
 
     if (currentSection == KaraSection.header) {
@@ -186,8 +183,48 @@ Kara? parse(String raw) {
 
     if (currentSection.isSongStructure) {
       if (_parseTimestamp(line) case KaraTime parsedTimestamp) {
+        if (currentStart == null ||
+            currentEnd == null ||
+            parsedTimestamp.start < currentStart) {
+          currentStart = parsedTimestamp.start;
+          currentEnd = parsedTimestamp.end;
+          continue;
+        }
+
         time.add(parsedTimestamp);
         continue;
+      }
+
+      if (time.isNotEmpty) {
+        if (currentLyric == null ||
+            currentStart == null ||
+            currentEnd == null) {
+          continue;
+        }
+        lines.add(KaraLine(
+          section: currentSection,
+          singers: currentSingers,
+          lyric: currentLyric,
+          start: currentStart,
+          end: currentEnd,
+          time: time,
+        ));
+        time = [];
+      }
+
+      final parsed = _parseKeyValue(line);
+      if (parsed != null) {
+        final tempSingers = List<bool>.generate(
+          singers.length,
+          (index) => false,
+          growable: false,
+        );
+        parsed.value
+            .split(",")
+            .map((e) => int.tryParse(e.trim()))
+            .forEach((element) {
+          // TODO: convert number to [true,true,false]
+        });
       }
     }
   }
