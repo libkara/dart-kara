@@ -5,7 +5,7 @@
       <img alt="dart-kara Logo" src="images/dartkara_light.png">
     </picture>
   </h1>
-<div/>
+</div>
 
 A Dart implementation of KARA.
 
