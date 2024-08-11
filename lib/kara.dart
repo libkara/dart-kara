@@ -80,7 +80,7 @@ KaraTime? _parseTimestamp(String line) {
     return null;
   }
 
-  final lyricSplit = split.last.split(".");
+  final lyricSplit = split.last.trim().split(" ");
 
   late final Duration end;
   if (_parseDuration(lyricSplit.first) case Duration parsedDuration) {
@@ -124,7 +124,7 @@ Kara? parse(String raw) {
   List<KaraTime> time = [];
 
   for (final line in raw.split('\n').skip(1)) {
-    if (line.startsWith("#")) continue;
+    if (line.startsWith("#") || line.isEmpty) continue;
 
     // Section
     // e.g `[Singers]`, `[Intro]`, `[Chorus]`
@@ -142,7 +142,7 @@ Kara? parse(String raw) {
         "Post-Bridge" => KaraSection.postBridge,
         _ => KaraSection.header,
       };
-
+      continue;
       if (currentSection.isSongStructure && time.isNotEmpty) {}
     }
 
@@ -188,7 +188,10 @@ Kara? parse(String raw) {
             parsedTimestamp.start < currentStart) {
           currentStart = parsedTimestamp.start;
           currentEnd = parsedTimestamp.end;
-          continue;
+        }
+
+        if (parsedTimestamp.end > currentEnd) {
+          currentEnd = parsedTimestamp.end;
         }
 
         time.add(parsedTimestamp);
@@ -209,23 +212,33 @@ Kara? parse(String raw) {
           end: currentEnd,
           time: time,
         ));
+        currentLyric = null;
+        currentStart = null;
+        currentEnd = null;
         time = [];
       }
 
       final parsed = _parseKeyValue(line);
       if (parsed != null) {
-        final tempSingers = List<bool>.generate(
-          singers.length,
-          (index) => false,
-          growable: false,
-        );
-        parsed.value
-            .split(",")
-            .map((e) => int.tryParse(e.trim()))
-            .forEach((element) {
-          // TODO: convert number to [true,true,false]
+        currentSingers =
+            parsed.value.split(",").map((e) => int.tryParse(e.trim())).fold(
+                List<bool>.generate(
+                  singers.length,
+                  (index) => false,
+                  growable: false,
+                ), (singers, parsedSingerIndex) {
+          if (parsedSingerIndex == null) {
+            return singers;
+          }
+          singers?[parsedSingerIndex] = true;
+          return singers;
         });
       }
+      if (currentLyric != null) {
+        // TODO: translations
+        continue;
+      }
+      currentLyric = line;
     }
   }
 

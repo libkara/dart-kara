@@ -13,7 +13,7 @@ void main() {
       parse(
         File.fromUri(
           Uri.file(
-            'test/example.kara',
+            'test/test_file/example.kara',
           ),
         ).readAsStringSync(),
       ).toString(),
