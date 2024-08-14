@@ -119,6 +119,7 @@ Kara? parse(String raw) {
   String? currentLyric;
   Duration? currentStart;
   Duration? currentEnd;
+  Map<String, String> currentTranslation = {};
 
   List<KaraLine> lines = [];
   List<KaraTime> time = [];
@@ -210,11 +211,13 @@ Kara? parse(String raw) {
           lyric: currentLyric,
           start: currentStart,
           end: currentEnd,
+          translations: currentTranslation.isEmpty ? null : currentTranslation,
           time: time,
         ));
         currentLyric = null;
         currentStart = null;
         currentEnd = null;
+        currentTranslation = {};
         time = [];
       }
 
@@ -233,9 +236,13 @@ Kara? parse(String raw) {
           singers?[parsedSingerIndex] = true;
           return singers;
         });
+        continue;
       }
       if (currentLyric != null) {
-        // TODO: translations
+        final translation = line.split(" ");
+        currentTranslation.update(
+            translation.first, (_) => translation.skip(1).join(' '),
+            ifAbsent: () => translation.skip(1).join(" "));
         continue;
       }
       currentLyric = line;
