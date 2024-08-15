@@ -233,7 +233,7 @@ Kara? parse(String raw) {
           if (parsedSingerIndex == null) {
             return singers;
           }
-          singers?[parsedSingerIndex] = true;
+          singers?[parsedSingerIndex - 1] = true;
           return singers;
         });
         continue;
