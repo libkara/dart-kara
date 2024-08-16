@@ -249,6 +249,18 @@ Kara? parse(String raw) {
     }
   }
 
+  if (currentLyric != null && currentStart != null && currentEnd != null) {
+    lines.add(KaraLine(
+      section: currentSection,
+      singers: currentSingers,
+      lyric: currentLyric,
+      start: currentStart,
+      end: currentEnd,
+      translations: currentTranslation.isEmpty ? null : currentTranslation,
+      time: time,
+    ));
+  }
+
   return Kara(
     title: title,
     artist: artist,
