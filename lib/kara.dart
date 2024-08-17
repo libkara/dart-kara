@@ -141,6 +141,7 @@ Kara? parse(String raw) {
         "Post-Chorus" => KaraSection.postChorus,
         "Bridge" => KaraSection.bridge,
         "Post-Bridge" => KaraSection.postBridge,
+        "Outro" => KaraSection.outro,
         _ => KaraSection.header,
       };
       continue;
