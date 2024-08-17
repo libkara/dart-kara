@@ -68,7 +68,7 @@ Duration? _parseDuration(String duration) {
   }
 }
 
-KaraTime? _parseTimestamp(String line) {
+KaraChunk? _parseTimestamp(String line) {
   final split = line.split("-->");
 
   if (split.length != 2) return null;
@@ -93,7 +93,7 @@ KaraTime? _parseTimestamp(String line) {
   String? roman = lyricSplit.elementAtOrNull(2);
   String? furigana = lyricSplit.elementAtOrNull(3);
 
-  return KaraTime(
+  return KaraChunk(
     start: start,
     end: end,
     original: original,
@@ -122,7 +122,7 @@ Kara? parse(String raw) {
   Map<String, String> currentTranslation = {};
 
   List<KaraLine> lines = [];
-  List<KaraTime> time = [];
+  List<KaraChunk> time = [];
 
   for (final line in raw.split('\n').skip(1)) {
     if (line.startsWith("#") || line.isEmpty) continue;
@@ -183,7 +183,7 @@ Kara? parse(String raw) {
     }
 
     if (currentSection.isSongStructure) {
-      if (_parseTimestamp(line) case KaraTime parsedTimestamp) {
+      if (_parseTimestamp(line) case KaraChunk parsedTimestamp) {
         if (currentStart == null ||
             currentEnd == null ||
             parsedTimestamp.start < currentStart) {

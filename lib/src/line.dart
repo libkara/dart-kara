@@ -25,11 +25,11 @@ class KaraLine {
   final KaraTranslation? translations;
   final Duration start;
   final Duration end;
-  final List<KaraTime> time;
+  final List<KaraChunk> time;
 }
 
-class KaraTime {
-  const KaraTime({
+class KaraChunk {
+  const KaraChunk({
     required this.start,
     required this.end,
     required this.original,
