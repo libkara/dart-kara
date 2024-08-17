@@ -15,45 +15,51 @@ enum KaraSection {
   ///
   /// Use to distinguish song sections.
   ///
-  /// Also check [verse], [preChorus], [chorus], [postChorus], [bridge], and
-  /// [postBridge].
+  /// Also check [verse], [preChorus], [chorus], [postChorus], [bridge],
+  /// [postBridge], and [outro].
   intro,
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [preChorus], [chorus], [postChorus], [bridge], and
-  /// [postBridge].
+  /// Also check [intro], [preChorus], [chorus], [postChorus], [bridge],
+  /// [postBridge], and [outro].
   verse,
 
   /// Use to distinguish song sections.
   ///
   /// Also check [intro], [verse], [chorus], [postChorus], [bridge], and
-  /// [postBridge].
+  /// [postBridge], and [outro].
   preChorus,
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [verse], [preChorus], [postChorus], [bridge], and
-  /// [postBridge].
+  /// Also check [intro], [verse], [preChorus], [postChorus], [bridge],
+  /// [postBridge], and [outro].
   chorus,
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [verse], [preChorus], [chorus], [bridge], and
-  /// [postBridge].
+  /// Also check [intro], [verse], [preChorus], [chorus], [bridge],
+  /// [postBridge], and [outro].
   postChorus,
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous], and
-  /// [postBridge].
+  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous],
+  /// [postBridge], and [outro].
   bridge,
 
   /// Use to distinguish song sections.
   ///
-  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous], and
-  /// [bridge].
-  postBridge;
+  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous],
+  /// [bridge], and [outro].
+  postBridge,
+
+  /// Use to distinguish song sections.
+  ///
+  /// Also check [intro], [verse], [preChorus], [chorus], [postChrous],
+  /// [bridge], and [postBridge].
+  outro;
 
   /// Section of a song structure.
   ///
@@ -65,7 +71,8 @@ enum KaraSection {
         KaraSection.chorus ||
         KaraSection.postChorus ||
         KaraSection.bridge ||
-        KaraSection.postBridge =>
+        KaraSection.postBridge ||
+        KaraSection.outro =>
           true,
         _ => false,
       };
