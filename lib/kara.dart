@@ -2,6 +2,19 @@
 // Use of this source code is governed by a BSD-style license that can be found
 // in LICENSE or at https://opensource.org/license/BSD-3-clause.
 
+/// KARA (karaoke caption format) parser library.
+/// More info about KARA: https://github.com/libkara
+///
+/// # Parsing KARA file
+/// ```dart
+/// import 'dart:io';
+/// import 'package:kara/kara.dart';
+///
+/// Future<void> main() async {
+///   final karaFile = await File('example.kara');
+///   parse(karaFile);
+/// }
+/// ```
 library kara;
 
 import 'package:kara/src/exception.dart';
