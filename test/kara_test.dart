@@ -54,7 +54,7 @@ void main() {
               start: Duration(seconds: 3, milliseconds: 503),
               end: Duration(seconds: 11, milliseconds: 117),
               time: [
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 3, milliseconds: 503),
                   end: Duration(seconds: 11, milliseconds: 117),
                   original: 'Da ra da da da da ooh',
@@ -83,60 +83,60 @@ void main() {
               start: Duration(seconds: 12, milliseconds: 929),
               end: Duration(seconds: 15, milliseconds: 765),
               time: [
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "날",
                   roman: "nal",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "끌",
                   roman: "kkeu",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "어",
                   roman: "oe",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "당",
                   roman: "dang",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "긴",
                   roman: "gin",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "감",
                   roman: "gam",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "정",
                   roman: "jeong",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "의",
                   roman: "ui",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "Blas",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 12, milliseconds: 929),
                   end: Duration(seconds: 15, milliseconds: 765),
                   original: "ting",
@@ -160,61 +160,61 @@ void main() {
               start: Duration(seconds: 20, milliseconds: 976),
               end: Duration(seconds: 25, milliseconds: 108),
               time: [
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "또",
                   roman: "tto",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "다",
                   roman: "da",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "른",
                   roman: "reun",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "시",
                   roman: "si",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "작",
                   roman: "jag",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "을",
                   roman: "uel",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "알",
                   roman: "all",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "려",
                   roman: "yeo",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "와",
                   roman: "wa",
                 ),
-                KaraTime(
+                KaraChunk(
                   start: Duration(seconds: 20, milliseconds: 976),
                   end: Duration(seconds: 25, milliseconds: 108),
                   original: "(Let's start)",
